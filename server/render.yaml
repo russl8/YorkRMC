@@ -1,0 +1,7 @@
+services:
+  - name: server
+    buildCommand: npm install
+    startCommand: npm start
+    env:
+      - key: NODE_ENV
+        value: production

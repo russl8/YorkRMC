@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "YorkRMC",
+  "version": "1.0",
+
+  "permissions": ["activeTab"],
+  "content_scripts": [
+    {
+      "matches": ["https://w2prod.sis.yorku.ca/Apps/WebObjects/cdm.woa/*"],
+      "js": ["contentScript.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "action": {
+    "default_icon": {
+      "16": "favicon16.png",
+      "32": "favicon32.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  }
+}
